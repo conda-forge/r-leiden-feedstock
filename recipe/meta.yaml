@@ -1,4 +1,4 @@
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/leiden_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/leiden/leiden_{{ version }}.tar.gz
-  sha256: c2b5e1c061c8bbea494639a0d7f0fa22f5b41ff5fd911409e5f832f3575d06c2
+  sha256: c2c233a43b251e464655f7ef579d96a1f07961588d7761a16ae19cd482464932
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -42,12 +42,10 @@ test:
 about:
   home: https://github.com/TomKellyGenetics/leiden
   license: GPL-3
-  summary: 'Implements the ''Python leidenalg'' module to be called in R. Enables clustering
-    using the leiden algorithm for partition a graph into communities. See the ''Python''
-    repository for more details: <https://github.com/vtraag/leidenalg> Traag et al (2018)
-    From Louvain to Leiden: guaranteeing well-connected communities. <arXiv:1810.08473>.'
+  summary: "Implements the 'Python leidenalg' module to be called in R. Enables clustering using the leiden algorithm for partition a graph into communities. See the 'Python' repository for more details: <https://github.com/vtraag/leidenalg> Traag et al (2018) From Louvain to Leiden: guaranteeing well-connected communities.\
+    \ <arXiv:1810.08473>."
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
