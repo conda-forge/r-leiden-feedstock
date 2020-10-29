@@ -5,11 +5,9 @@ Home: https://github.com/TomKellyGenetics/leiden
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-leiden-feedstock/blob/master/LICENSE.txt)
 
 Summary: Implements the 'Python leidenalg' module to be called in R. Enables clustering using the leiden algorithm for partition a graph into communities. See the 'Python' repository for more details: <https://github.com/vtraag/leidenalg> Traag et al (2018) From Louvain to Leiden: guaranteeing well-connected communities. <arXiv:1810.08473>.
-
-
 
 Current build status
 ====================
