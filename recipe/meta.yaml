@@ -36,6 +36,7 @@ requirements:
 
 test:
   commands:
+    - mamba create -yn r-reticulate -c conda-forge vtraag python-igraph pandas umap learn  # [not win]
     - $R -e "library('leiden')"           # [not win]
     - "\"%R%\" -e \"library('leiden')\""  # [win]
 
