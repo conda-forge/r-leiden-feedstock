@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,6 +36,7 @@ requirements:
 
 test:
   commands:
+    - mamba create -yn r-reticulate -c conda-forge leidenalg pandas umap-learn  # [not win]
     - $R -e "library('leiden')"           # [not win]
     - "\"%R%\" -e \"library('leiden')\""  # [win]
 
